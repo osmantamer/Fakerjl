@@ -1,0 +1,2 @@
+{{%numericRandomizer 1 1 10%}}{{%numericRandomizer 4 0 10%}}
+{{%numericRandomizer 1 1 10%}}{{%numericRandomizer 4 0 10%}}-{{%numericRandomizer 4 0 10%}}

@@ -1,0 +1,2 @@
+Apt. {{%numericRandomizer 1 1 10%}}{{%numericRandomizer 2 0 10%}}
+Suite {{%numericRandomizer 1 1 10%}}{{%numericRandomizer 2 0 10%}}

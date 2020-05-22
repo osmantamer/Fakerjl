@@ -1,6 +1,8 @@
 using Feyk
 using Test
 
+Feyk.init()
+
 @testset "Feyk.jl" begin
-    # Write your own tests here.
+    @test typeof(Feyk.malename()) == String
 end
