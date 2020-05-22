@@ -1,0 +1,13 @@
+name = "Feyk"
+uuid = "05cf753e-9c71-11ea-2604-a3466e2f9839"
+authors = ["osman tamer"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
