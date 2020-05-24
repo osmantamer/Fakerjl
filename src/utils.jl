@@ -1,5 +1,3 @@
-using Random
-
 curr_path = @__DIR__
 
 function getrandom(select::Array)

@@ -9,7 +9,7 @@ function firstfemalename()
 end
 
 function firstname()
-    rand(Bool) ? firstmalename() : firstfemalename()
+    return rand(Bool) ? firstmalename() : firstfemalename()
 end
 
 function lastmalename()
