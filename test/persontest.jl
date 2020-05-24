@@ -3,17 +3,19 @@ using Feyk
 macro catcherror(func)
     quote
         try
+            println($func)
             @assert typeof($func) == String
         catch
-            println("Error in generating first name")
+            error("Error in generating $func")
         end
     end
 end
 
-function testperson()
+function persontest()
     @catcherror Feyk.firstname()
     @catcherror Feyk.firstmalename()
     @catcherror Feyk.firstfemalename()
+    return true
 end
 
 

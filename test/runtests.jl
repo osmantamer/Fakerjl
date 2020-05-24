@@ -1,9 +1,9 @@
 using Feyk
 using Test
-include("person_test.jl")
+include("persontest.jl")
 
 Feyk.init()
 
 @testset "Feyk.jl" begin
-    @test testperson()
+    @test persontest() == true
 end
