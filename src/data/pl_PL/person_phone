@@ -1,2 +1,1 @@
-+48 {{%numericRandomizer 3 0 10%}}-{{%numericRandomizer 3 0 10%}}-{{%numericRandomizer 3 0 10%}}
-
++48 {{%rand(100:999)%}}-{{%rand(100:999)%}}-{{%rand(100:999)%}}

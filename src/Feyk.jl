@@ -1,5 +1,6 @@
 module Feyk
 include("Person.jl")
+include("Communication.jl")
 include("utils.jl")
 
 mutable struct Generator
@@ -31,7 +32,6 @@ end
 
 function readsource(file::String)
     try
-        println(gen.resrc[file])
         numlines = readlines(gen.resrc[file])
         return length(numlines) > 0 ? numlines : error("File is empty!")
     catch SystemError
@@ -41,7 +41,22 @@ end
 
 function genericgenerator(pre::String)
     x = readsource(pre)
-    return getrandom(x)
+    randomline = getrandom(x)
+    regex = r"{{.*?}}"
+    matches = eachmatch(regex, randomline)
+    for m in matches
+        tokentype = typeoftoken(m.match[3:end-2])
+        if tokentype == "function"
+            expr = Meta.parse(m.match[4:end-3])
+            evl = eval(expr)
+            randomline = replace(randomline, regex => evl, count=1)
+        else
+            file = String(m.match[3:end-2])
+            output = genericgenerator(file)
+            randomline = replace(randomline, regex => output, count=1)
+        end
+    end
+    return randomline
 end
 
 end # end of module

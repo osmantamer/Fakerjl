@@ -1,28 +1,15 @@
 using Feyk
+using Test
 
-macro catcherror(func)
-    quote
-        try
-            println($func)
-            @assert typeof($func) == String
-        catch
-            error("Error in generating $func")
-        end
-    end
+Feyk.init()
+
+@testset "person test" begin
+    @test typeof(Feyk.firstname()) == String
+    @test typeof(Feyk.firstmalename()) == String
+    @test typeof(Feyk.firstfemalename()) == String
 end
 
-function persontest()
-    @catcherror Feyk.firstname()
-    @catcherror Feyk.firstmalename()
-    @catcherror Feyk.firstfemalename()
-    return true
-end
-
-
-macro unless(test_expr, branch_expr)
-  quote
-    if !$test_expr
-      $branch_expr
-    end
-  end
+@testset "communication test" begin
+    @test typeof(Feyk.phone()) == String
+    @test typeof(Feyk.email()) == String
 end

@@ -1,9 +1,13 @@
 using Feyk
 using Test
-include("persontest.jl")
+using SafeTestsets
+
+@safetestset "Feyk Test" begin include("persontest.jl") end
 
 Feyk.init()
 
-@testset "Feyk.jl" begin
-    @test persontest() == true
-end
+println(Feyk.firstname())
+println(Feyk.firstmalename())
+println(Feyk.firstfemalename())
+println(Feyk.phone())
+println(Feyk.email())

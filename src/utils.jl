@@ -7,5 +7,9 @@ end
 # Prints possible languages
 function getlanguages()
     possible_languages = "$curr_path/data"
-    println(join(readdir(possible_languages), ", "))
+    return join(readdir(possible_languages), ", ")
+end
+
+function typeoftoken(token::SubString)
+    return token[1] == '%' && token[end] == '%' ? "function" : "default"
 end

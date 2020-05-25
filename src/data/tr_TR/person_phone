@@ -1,1 +1,1 @@
-+90-{{%numericRandomizer 3 0 10%}}-{{%numericRandomizer 3 0 10%}}-{{%numericRandomizer 2 0 10%}}-{{%numericRandomizer 2 0 10%}}
++90-{{%rand(100:999)%}}-{{%rand(100:999)%}}-{{%rand(10:99)%}}-{{%rand(10:99)%}}
