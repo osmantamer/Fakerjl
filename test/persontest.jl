@@ -1,15 +1,15 @@
-using Feyk
+using Fakerjl
 using Test
 
-Feyk.init()
+Fakerjl.init()
 
 @testset "person test" begin
-    @test typeof(Feyk.firstname()) == String
-    @test typeof(Feyk.firstmalename()) == String
-    @test typeof(Feyk.firstfemalename()) == String
+    @test typeof(Fakerjl.firstname()) == String
+    @test typeof(Fakerjl.firstmalename()) == String
+    @test typeof(Fakerjl.firstfemalename()) == String
 end
 
 @testset "communication test" begin
-    @test typeof(Feyk.phone()) == String
-    @test typeof(Feyk.email()) == String
+    @test typeof(Fakerjl.phone()) == String
+    @test typeof(Fakerjl.email()) == String
 end

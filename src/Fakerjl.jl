@@ -1,4 +1,4 @@
-module Feyk
+module Fakerjl
 include("Person.jl")
 include("Communication.jl")
 include("utils.jl")

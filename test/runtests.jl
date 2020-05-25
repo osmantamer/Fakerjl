@@ -1,13 +1,13 @@
-using Feyk
+using Fakerjl
 using Test
 using SafeTestsets
 
-@safetestset "Feyk Test" begin include("persontest.jl") end
+@safetestset "Fakerjl Test" begin include("persontest.jl") end
 
-Feyk.init()
+Fakerjl.init()
 
-println(Feyk.firstname())
-println(Feyk.firstmalename())
-println(Feyk.firstfemalename())
-println(Feyk.phone())
-println(Feyk.email())
+println(Fakerjl.firstname())
+println(Fakerjl.firstmalename())
+println(Fakerjl.firstfemalename())
+println(Fakerjl.phone())
+println(Fakerjl.email())

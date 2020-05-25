@@ -1,9 +1,9 @@
-using Feyk
+using Fakerjl
 
 function phone()
-    return Feyk.genericgenerator("person_phone")
+    return Fakerjl.genericgenerator("person_phone")
 end
 
 function email()
-    return Feyk.genericgenerator("person_email")
+    return Fakerjl.genericgenerator("person_email")
 end

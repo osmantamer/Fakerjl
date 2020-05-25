@@ -1,11 +1,11 @@
-using Feyk
+using Fakerjl
 
 function firstmalename()
-    return Feyk.genericgenerator("person_first_name_male")
+    return Fakerjl.genericgenerator("person_first_name_male")
 end
 
 function firstfemalename()
-    return Feyk.genericgenerator("person_first_name_female")
+    return Fakerjl.genericgenerator("person_first_name_female")
 end
 
 function firstname()
@@ -13,27 +13,27 @@ function firstname()
 end
 
 function lastmalename()
-    return Feyk.genericgenerator("person_last_name_male")
+    return Fakerjl.genericgenerator("person_last_name_male")
 end
 
 function lastfemalename()
-    return Feyk.genericgenerator("person_last_name_female")
+    return Fakerjl.genericgenerator("person_last_name_female")
 end
 
 function lastname()
-    return Feyk.genericgenerator("person_last_name")
+    return Fakerjl.genericgenerator("person_last_name")
 end
 
 function prefixmale()
-    return Feyk.genericgenerator("person_prefix_male")
+    return Fakerjl.genericgenerator("person_prefix_male")
 end
 
 function prefixfemale()
-    return Feyk.genericgenerator("person_prefix_female")
+    return Fakerjl.genericgenerator("person_prefix_female")
 end
 
 function prefix()
-    return Feyk.genericgenerator("person_prefix")
+    return Fakerjl.genericgenerator("person_prefix")
 end
 
 function gender()
